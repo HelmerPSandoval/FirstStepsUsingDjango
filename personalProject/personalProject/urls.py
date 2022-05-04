@@ -20,9 +20,11 @@ from petclub.views import PetListAPIView
 from petclub.views import (
     HelloWorld,
     PetListAPIView,
+    PetAPIView
 )
 
 urlpatterns = [
     path('hi', HelloWorld.as_view(), name="helloworld"),
     path('pets/', PetListAPIView.as_view(), name="all-pets"),
+    path('pet/', PetAPIView.as_view(), name="single-pet"),
 ]
